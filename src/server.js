@@ -1,0 +1,17 @@
+const express = require("express")
+
+const cors = require("cors")
+
+const routes = require("./routes/temperaturaRouter")
+
+const app = express()
+
+app.use(cors())
+app.use(express.json())
+
+app.use(routes)
+
+app.listen(333,()=>{
+    console.log("Servidor Iot rodando na porta 333")
+})
+
